@@ -1,6 +1,7 @@
 /*String Interpolation*/
 const fName = "Rahul"
 const sName = "Kumar"
+//Use this method rather than + to concatenate
 console.log(`My name is ${fName} and surname ${sName}`);
 
 //Declaring String using object & inside object constructor passing value
@@ -44,4 +45,7 @@ console.log(old_url.replace('&45', '-'));
  //To check if it includes keyword or not
  console.log(old_url.includes('incraft'));
  console.log(old_url.includes('ink'));
+ 
+ //Using split for splitting string into arrays
+ console.log(oldString.split(' '));
  
