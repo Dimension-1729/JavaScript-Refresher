@@ -47,3 +47,51 @@ function totalCartValue(value1,value2,...values){
 }
 
 console.log(totalCartValue(100,200,500,600,800));
+
+//How to pass object inside a function
+
+let userDetails = {
+    userName: 'Sushant',
+    Salary: 26500
+}
+
+function handleObject(userObject){
+    console.log(`Username is ${userObject.userName} and salary is ${userObject.Salary}`);
+    
+}
+
+handleObject(userDetails)
+//Directly passing an object as argument
+handleObject({userName: 'Kapil', Salary: 48500, Sex: 'male'})
+
+//Passing Array to Functions
+
+let newArray = [350,100,250,659]
+
+//a different approach
+function returnArray(indexValue,i){
+    return indexValue[i]
+}
+
+console.log(returnArray(newArray,3));
+
+
+//Functions as expressions
+
+console.log(addone(2)); //This will not return error
+
+function addone(num){
+    return num+1;
+}
+
+console.log(addone(2));
+
+//Now function as expression when we assign them or use them like a variable
+
+// console.log(addtwo(5))      //This will give error if we access function before it's declaration, depends upon how functions are declared
+
+const addtwo = function(num){
+    return num +2;
+}
+
+console.log(addtwo(5))
