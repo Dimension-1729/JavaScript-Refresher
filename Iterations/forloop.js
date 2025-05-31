@@ -30,3 +30,14 @@
     
     
  }
+
+
+ //continue [Skips the condition for 1 time but stays inside the loop]
+
+ for (let index = 1; index <= 10; index++) {
+   if (index == 5) {
+      continue    //Value of i is 5 will not be printed
+   }
+   
+   console.log(`Value of i is ${index}`);
+ }
