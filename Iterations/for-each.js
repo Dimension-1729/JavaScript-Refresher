@@ -44,8 +44,19 @@ const language = [
 
 ]
 
-language.forEach( (item) => {       //callback func ke parameter ke har value ka access hota hai
+// language.forEach( (item) => {       //callback func ke parameter ke har value ka access hota hai
+//     console.log(item.course);
+//     console.log(item.price);
+    
+// })
+
+//for each doesn't return anything
+
+let values = language.forEach( (item) => {       //callback func ke parameter ke har value ka access hota hai
     console.log(item.course);
     console.log(item.price);
+    return item //it will still return undefined
     
 })
+
+console.log(values);
