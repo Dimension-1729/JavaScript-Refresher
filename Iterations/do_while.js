@@ -26,3 +26,17 @@ do {
     console.log(`Value is ${score}`);
     
 } while (score <= 10);
+
+//Using do-while loop to print 1-10 tables
+
+let numb = 1    //need to initialize these values so it can be used inside do-while loop
+let value = 1
+do {
+    value = 1   //You need to reset value = 1 inside the outer loop, right after each inner loop finishes:
+    do {
+        console.log(`${numb} * ${value} =  `, numb*value);
+        value++
+    } while (value <= 10);
+    
+    numb++
+} while (numb <= 10);

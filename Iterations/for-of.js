@@ -4,7 +4,7 @@
 
  //for-of loop
 
- const friendNames =['shiv','mehak','divit','monkey']
+const friendNames =['shiv','mehak','divit','monkey']
 const friendFullName = 'Sushmit Kumar'
 
 for (const element of friendNames) {

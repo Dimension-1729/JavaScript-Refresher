@@ -23,3 +23,29 @@ coding.forEach( (items, index, array) => {
     console.log(items, index, array);
     
 })
+
+const language = [
+    {
+        course: 'python',
+        price: 500
+    },
+    {
+        course: 'java',
+        price: 850
+    },
+    {
+        course: 'c++',
+        price: 650
+    },
+    {
+        course: 'html',
+        price: 100
+    },
+
+]
+
+language.forEach( (item) => {       //callback func ke parameter ke har value ka access hota hai
+    console.log(item.course);
+    console.log(item.price);
+    
+})
