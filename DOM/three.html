@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating Node List</title>
+     <style>
+        body{
+            background-color: #212121;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+<script>
+    const div = document.createElement('div')
+    console.log(div);
+    div.className = 'main'  //this adds class to div
+
+    div.id = Math.round(Math.random() * 100 + 1) // +1 so it's never zero, *100 so 2 digit and round for whole number. This will create random ID's each time for example everytime we get some value from DB etc and want to do something to it.
+
+
+    //For styling
+    div.style.backgroundColor = 'green'
+    div.style.padding = '10px'
+    div.style.borderRadius = '10px'
+
+
+    //For adding attributes
+    div.setAttribute('title', 'placeholder for main')
+
+    //Two ways to add text, controversial which one is better to use for DSA [more optimization]
+
+    //First way, it overwrites. Also first it brings element and then write and then place it....so 2 steps
+    div.innerText = "This is the main div"
+
+    //Second way is to create an element and then append it
+    const addText = document.createTextNode('I am the main text')
+    div.appendChild(addText)
+    
+    // div.innerText = "bhag lode" run it, see it overrides
+
+    //Final, step is to attach to the body of the document
+
+    document.body.appendChild(div)
+
+/*Now make it as a function, pass arguments what to write in it and replicate....run loop how many times function must be executed and so on*/
+</script>
+
+</html>

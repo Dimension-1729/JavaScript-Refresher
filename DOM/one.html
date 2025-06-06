@@ -1,0 +1,89 @@
+<!-- Window >> Document >> HTML >>
+head and body [nodes] -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Learning</title>
+    <style>
+        body{
+            background-color: #414141;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="first" class="learn">Learning DOM manipulation</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque, non? Aut dignissimos animi cupiditate nemo fugiat iusto aliquid dolorum eligendi!</p>
+
+    <br/>
+    <ul>
+        <li class="list-item">One</li>
+        <li class="list-item">Two</li>
+        <li class="list-item">Three</li>
+        <li class="list-item">Four</li>
+    </ul>
+</body>
+</html>
+
+<!-- Query Selectors
+
+
+.innerText = Returns content of element which is visible in browser Window
+
+.textContent = Returns all content even if it is hidden by class
+
+.getElementById = to get attributed and their values from a document e.g document.getElementById('id name or class name')
+
+.getAttribute = a method to get attribute value for class we use className
+
+.setAttribute = to set or change attribute values e.g changing class or id names e.g document.getElementById("title").setAttribute('class name','new class name')
+
+.innerHTML = will give whole content including present html tags within the content
+
+.querySelector = matches and return first query based on the value provided e.g document.querySelector('h1')  ; this will return first h1 tags of web page 2. e.g .querySelector('input[type=password]') or .querySelextor('p:first-child')
+
+list.querySelector('li').style.backgroundColor = 'yellow'    //change bg
+list.querySelector('li').innerText = "Rohan"    //change content
+Selector chaining, or save them into a variable and then manipulate
+
+const items = newList.querySelectorAll('li')
+items[0].style.color = 'red' 
+As querySelectorAll returns nodeList i.e why we need to specify which element we need to change by using index number and not in querySelector as it always works on first element.
+
+There is a difference between NodeList, HTML Collection and Arrays;
+NodeList: Represents all types of DOM nodes, not just elements. Useful when selecting all children (e.g., including text, comments).
+If you want to use map in nodeList you need to convert it into map
+
+HTMLCollection: Represents only HTML elements, typically returned by older DOM APIs. 
+
+Array: Pure JavaScript structure for general-purpose list manipulation.
+
+To select all li items under ul list
+const list = document.querySelectorAll('li')
+list.forEach((item) => {
+    item.style.backgroundColor = 'blue'
+})
+
+
+.getElementsByClassName('list-item') returns in HTML collection and we can't use forEach method or any other loop, we need to convert it to array using "Array.from()"
+Array.from(listClass).forEach((item) => {
+   console.log(item)
+})
+
+Using DOM to copy all headings of wiki page
+const allH2 = document.querySelectorAll('h2')
+Array.from(listClass).forEach((item) => {
+   console.log(item)
+})
+
+For multiple style comments applied on a single nodelist
+allH2.forEach( (item) => {
+    item.style.padding = '10px';
+    item.style.backgroundColor = 'purple';
+    item.innerText = 'Ardhanarishvara'
+})
+In JavaScript, you can't write units like px as plain text.JavaScript thinks px is a variable or property, but it’s not defined — hence the syntax error.
+ -->
