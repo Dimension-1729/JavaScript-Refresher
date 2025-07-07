@@ -16,4 +16,54 @@
         <li>JavaScript</li>
     </ul>
 </body>
+<script>
+    //function to add element to ul [Here, in this function there is whole traversing of tree]
+    function addItem(item) {
+        const newItem = document.createElement('li')
+        newItem.innerText = item //direct assign no inverted commas
+        document.body.querySelector('.language').appendChild(newItem)   //If I do not use querySelector('.language') then item will just append to the body
+    }
+
+    addItem('python')
+    addItem('python')
+    addItem('typescript')
+
+    //Optimized DSA function to replicate the above task
+
+    function effFunc(language_name) {
+        const lang = document.createElement('li')
+        //Optimied way of adding or inserting text into the newly created element
+        const addName = document.createTextNode(language_name)
+        lang.appendChild(addName)
+        //Final attachment to the element
+        document.body.querySelector('.language').appendChild(lang)
+    }
+
+    effFunc('Perl')
+
+
+    //Function to edit the list elements
+
+    function editList(index,name) {
+       const item = document.querySelector(`li:nth-child(${index})`)
+       item.textContent = name
+    //    document.body.querySelector('.language').appendChild(item)
+    /*appendChild() moves an existing node to the end of the target element. So if item was already inside .language, you're removing it from its original spot and re-inserting it at the end.*/
+
+    /*or we could use this, but before we need to create an item using 
+    const created_item =document.createElement('li')
+    item.replaceWith(created_item)
+    */
+    }
+    editList(2,'micra')
+
+    //Another way to edit
+    const firstItem = document.querySelector('li:first-child')
+    firstItem.outerHTML = '<li> C++ </li>'      //here we have to use entire code to replace
+
+    //To remove last element
+    const lastElement = document.querySelector('li:last-child')
+    lastElement.remove()    //this will remove last element
+    
+</script>
 </html>
